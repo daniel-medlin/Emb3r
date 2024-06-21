@@ -10,5 +10,5 @@ module.exports.logger = function logger(guild, title, message){
         .setThumbnail(vars.NRicon)
         .setDescription(message)
         .setTimestamp()
-    channel.send({embeds: [logEmbed] });
+    channel.send({embeds: [logEmbed] }); 
 }

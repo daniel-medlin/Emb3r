@@ -186,6 +186,22 @@ Your question: ${question}`,
                 console.log(`${timestamp()} - server: ${guild.name} - Admin command by non-admin user - ${interaction.user.username} attempted to run '/rolemanager ${subCommand} in ${guild.name}`)
                 await interaction.reply({content: "You must be admin to use this command", ephemeral: true});//Shouldn't see this since it will be blocked at server level..)
             }
+        break;
+        case "warn":
+            if (isStaff(member)){
+                var warnedUser = options.getUser('user')
+                var warningText = options.getString('text')
+                var outString = `\
+User: ${warnedUser}\n\
+User ID: ${warnedUser.id}\n\
+Staff Member: ${member}\n\n====Warning Text====\n${warningText}`
+                await interaction.reply({content: `The warning against ${warnedUser} has been logged to the logs channel.`, ephemeral: true})
+                cmd.logger(guild, "User Warning", outString)               
+            } else {
+                cmd.logger(guild, "Admin command by non-admin user", `${interaction.user} attempted to run '/warn ${subCommand}'`)
+                console.log(`${timestamp()} - server: ${guild.name} - Admin command by non-admin user - ${interaction.user.username} attempted to run '/warn ${subCommand} in ${guild.name}`)
+                await interaction.reply({content: "You must be staff to use this command", ephemeral: true});
+            }
 	}
 }
 

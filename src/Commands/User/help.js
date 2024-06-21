@@ -17,6 +17,7 @@ All commands are slash commands.  Admin commands are logged.  To input a slash c
 __Admin commmands__\n These commands are only available for staff \n\
 1. `/delete <number>`: Must be between 1 and 99 and no older than 14 days.\n\
 2. `/parrot <message> [channel]` Make the bot say what you want it to.\n\
-3. `/rolemanager <add | remove | list>` Define roles for use in the /roles command.");
+3. `/rolemanager <add | remove | list>` Define roles for use in the /roles command.\n\
+4. `/warn <user> <text>` Logs a warning against the user to server logs.");
     return(helpEmbed);
 }

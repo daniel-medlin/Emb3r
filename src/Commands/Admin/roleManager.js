@@ -91,6 +91,9 @@ module.exports.roleManager = async function (subCommand, interaction, guild, mem
                 if(resp.customId == 'okButton'){//Fix roleManager.addRole
                     var myRoles = await cmd.storeRole(selection, guild, member)
                     interaction.editReply({content: myRoles, components: []})
+                    var list = ""
+                    await selection.forEach(r => list+=`\n${r.name}`)
+                    cmd.logger(guild, `User assignable roles added with /rolemanager by ${member.user.displayName}`,list)
                 } else {
                     interaction.editReply({content: "All Actions Canceled", components:[]})
                 }
@@ -178,6 +181,9 @@ module.exports.roleManager = async function (subCommand, interaction, guild, mem
                 if(resp.customId == 'okButton'){
                     var myRoles = await cmd.deleteRole(selection, guild, member)
                     interaction.editReply({content: myRoles, components: []})
+                    var list = ""
+                    await selection.forEach(r => list+=`\n${r.name}`)
+                    cmd.logger(guild, `User assignable roles removed with /rolemanager by ${member.user.displayName}`,list)
                 } else {
                     interaction.editReply({content: "All Actions Canceled", components:[]})
                 }
