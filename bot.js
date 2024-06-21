@@ -8,13 +8,13 @@ const path = require('node:path')
 const { timestamp } = require('./src/timestamp.js');
 const client = new Client({ 
 	intents: [
-        	GatewayIntentBits.Guilds,
+        GatewayIntentBits.Guilds,
 		GatewayIntentBits.GuildModeration,
 		GatewayIntentBits.GuildMessages,
-        	GatewayIntentBits.MessageContent,
+        GatewayIntentBits.MessageContent,
 		GatewayIntentBits.GuildInvites,
 		GatewayIntentBits.GuildMembers,
-        	GatewayIntentBits.GuildPresences,
+        GatewayIntentBits.GuildPresences,
 		GatewayIntentBits.GuildMessageReactions,
 		GatewayIntentBits.GuildVoiceStates,
       ],
