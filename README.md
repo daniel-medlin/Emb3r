@@ -1,4 +1,4 @@
-This is the "Essentially (a) Moderation Bot Rev. 3" that is used in several small tech servers.  It's been relatively customized to work with the servers but should be pretty easy to fit in most cases.
+This is the "Essentially (a) Moderation Bot Rev. 3" that is used in several small tech servers on Discord.  It's been relatively customized to work with the servers but should be pretty easy to fit in most cases.
 
 Pre-requisites:
 NPM and Node.js installed.
