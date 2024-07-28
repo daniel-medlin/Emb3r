@@ -3,8 +3,7 @@ This is the "Essentially (a) Moderation Bot Rev. 3" that is used in several smal
 Pre-requisites:
 NPM and Node.js installed.
 
-1. From the Emb3r directory, install your node_modules using npm
-  npm install
+1. From the Emb3r directory, install your node_modules using npm install
 2. Edit .env and insert your bot's private token.
 3. Launch the bot using node
   node bot.js
